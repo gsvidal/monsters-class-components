@@ -1,6 +1,4 @@
 import React from 'react';
-
-import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -9,6 +7,7 @@ class App extends React.Component {
 
     this.state = {
       monsters: [],
+      filteredMonsters: [],
     };
     console.log('constructor');
   }
@@ -20,7 +19,7 @@ class App extends React.Component {
         this.setState(
           () => {
             console.log('before update state');
-            return { monsters: result };
+            return { monsters: result, filteredMonsters: result };
           },
           () => {
             console.log('after update state but with new state');
@@ -29,13 +28,30 @@ class App extends React.Component {
       );
   }
 
+  handleSearch = (event) => {
+    const { monsters } = this.state;
+
+    const filtered = monsters.filter((monster) =>
+      monster.name
+        .toLocaleLowerCase()
+        .includes(event.target.value.toLocaleLowerCase())
+    );
+    this.setState({
+      filteredMonsters: filtered,
+    });
+  };
+
   render() {
     console.log('render App component');
+
+    const { filteredMonsters } = this.state;
+    const { handleSearch } = this;
+
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {this.state.monsters.map((monster) => (
+          <input type="search" className="input" onChange={handleSearch} />
+          {filteredMonsters.map((monster) => (
             <h2 key={monster.name}>{monster.name}</h2>
           ))}
         </header>
