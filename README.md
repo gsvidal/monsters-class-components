@@ -1,3 +1,25 @@
+# monsters-rolodex-class-components
+
+A monsters rolodex App where we can search for some monsters and filter them acording to the text we input, made with class based components
+
+<a href="https://github.com/gsvidal/monsters-rolodex">
+  <img src="https://i.postimg.cc/rwRZK6fn/monsters-rolodex.png">
+</a>
+
+## Technologies used and Features:
+
+A Calculator app made with:
+
+- Test Driven Development
+- React
+- Vite
+- Vitest
+- React Testing Library
+- Happy dom
+- Made from scratch.
+
+<hr />
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
