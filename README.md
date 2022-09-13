@@ -3,20 +3,12 @@
 A monsters rolodex App where we can search for some monsters and filter them acording to the text we input, made with class based components
 
 <a href="https://github.com/gsvidal/monsters-rolodex">
-  <img src="https://i.postimg.cc/rwRZK6fn/monsters-rolodex.png">
+  <img src="https://i.postimg.cc/VNLqR7yV/monsters-rolodex.png">
 </a>
 
 ## Technologies used and Features:
 
-A Calculator app made with:
-
-- Test Driven Development
-- React
-- Vite
-- Vitest
-- React Testing Library
-- Happy dom
-- Made from scratch.
+- React ( with class based components)
 
 <hr />
 

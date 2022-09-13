@@ -1,7 +1,19 @@
 .card-list {
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(3, minmax(50px, 300px));
+  grid-template-columns: 1fr;
   place-content: center;
   place-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .card-list {
+    grid-template-columns: repeat(2, minmax(50px, 300px));
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-list {
+    grid-template-columns: repeat(3, minmax(50px, 300px));
+  }
 }
